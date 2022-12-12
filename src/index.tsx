@@ -3,13 +3,13 @@ import ReactDOM from "react-dom/client";
 import {
   createBrowserRouter,
   RouterProvider,
-  redirect,
   Navigate,
 } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import BackupsPage from "./pages/backups/BackupsPage";
+import BackupFailureReasonPage from "./pages/backups/BackupFailureReasonPage";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/backups",
     element: <BackupsPage />,
+  },
+  {
+    path: "/backups/failure/reason/:failureReasonId",
+    element: <BackupFailureReasonPage />,
   },
 ]);
 
